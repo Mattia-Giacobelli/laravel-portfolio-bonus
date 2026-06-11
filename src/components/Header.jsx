@@ -11,6 +11,12 @@ export default function Header() {
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
+    const scrollContacts = () => {
+        const section = document.querySelector('#contacts');
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+
     const scrollProjects = useRef();
 
     return (
@@ -32,14 +38,11 @@ export default function Header() {
                                     <Link className="nav-link" aria-current="page" to={'/'}>Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <button onClick={() => { scroll() }} >Projects</button>
+                                    <button onClick={() => { scroll() }} >Progetti</button>
                                     {/* <button onClick={() => { scrollProjects.current.scrollIntoView() }} >Projects</button> */}
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" aria-disabled="true">About</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" aria-disabled="true">Contatti</Link>
+                                    <button onClick={() => { scrollContacts() }} >Contatti</button>
                                 </li>
                             </ul>
                         </div>

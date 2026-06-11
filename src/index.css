@@ -2,11 +2,59 @@
 @import url('bootstrap-icons');
 
 
-body {
+/*
 
-  background-image: url('./assets/background.png');
+      TYPOGRAPHY
 
+*/
+
+a {
+
+  text-decoration: none;
 }
+
+.btn-unstyle {
+
+  border: none;
+  background-color: #ffffff00;
+}
+
+/*
+      TAGS
+*/
+
+.bcg-React {
+
+  background-color: #61DAFB;
+  color: black;
+  padding-bottom: 6px;
+  margin-right: 0.7rem;
+}
+
+.bcg-Express {
+
+  background-color: #353535;
+  color: white;
+  padding-bottom: 6px;
+  margin-right: 0.7rem;
+}
+
+.bcg-Laravel {
+
+  background-color: #FF2D20;
+  color: white;
+  padding-bottom: 6px;
+  margin-right: 0.7rem;
+}
+
+.bcg-Bootstrap {
+
+  background-color: #7952B3;
+  color: white;
+  padding-bottom: 6px;
+  margin-right: 0.7rem;
+}
+
 
 header {
 
@@ -28,9 +76,16 @@ header {
 
     font-weight: 500;
 
+
     a {
       color: white;
       transition: color 0.3s ease-in-out;
+    }
+
+    a:hover,
+    a:visited {
+
+      color: white;
     }
   }
 
@@ -52,73 +107,185 @@ main {
   #home {
 
     height: 100vh;
+    background-image: url('./assets/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
 
-    h1 {
-      font-size: 64px;
-      font-weight: 900;
 
-      /*TESTO CON GRADIENTE*/
-      /* 1. Definisci il gradiente come sfondo */
-      background: linear-gradient(90deg, #0004ff, #e52e71);
+    .container {
 
-      /* 2. Taglia lo sfondo seguendo la forma del testo */
-      -webkit-background-clip: text;
-      background-clip: text;
+      height: 100vh;
 
-      /* 3. Rendi il colore del testo trasparente per far vedere lo sfondo sotto */
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-      /* Fallback per compatibilità */
-
-    }
-
-    .go-to {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      font-size: 48px;
 
-      button {
+      h1 {
+        font-size: 64px;
+        font-weight: 900;
 
+        /* TESTO CON GRADIENTE*/
+        /* 1. Definisci il gradiente come sfondo */
+        /* background: linear-gradient(90deg, #0004ff, #e52e71); */
+
+        /* 2. Taglia lo sfondo seguendo la forma del testo */
+        /* -webkit-background-clip: text;
+        background-clip: text; */
+
+        /* 3. Rendi il colore del testo trasparente per far vedere lo sfondo sotto */
+        /* -webkit-text-fill-color: transparent;
+        color: transparent; */
+        /* Fallback per compatibilità */
+
+      }
+
+      .card {
+
+        background-color: #0f172a;
+        color: #f8fafc;
+        font-size: 1.5rem;
+
+        .profile-img {
+          width: 350px;
+          height: 350px;
+          object-fit: cover;
+          border-radius: 15%;
+          margin: 0 20px 10px 0;
+        }
+      }
+
+      .go-to {
+        margin-top: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        border: none;
-        background-color: rgba(255, 255, 255, 0);
-        color: blue;
-        font-weight: bold;
+        button {
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          border: none;
+          background-color: rgba(255, 255, 255, 0);
+          color: #0f172a;
+          font-weight: bold;
 
 
-        .bi-arrow-down {
-          display: inline-block;
-          animation: jump 1.5s ease-in-out infinite;
+          .bi-arrow-down {
+            display: inline-block;
+            animation: jump 1.5s ease-in-out infinite;
+          }
         }
       }
     }
+
   }
 
   #projects {
 
     padding: 100px;
     height: 100vh;
-    background-color: white;
+    background-color: rgb(240, 240, 240);
+
+    h1 {
+
+      font-size: 3rem;
+      font-weight: 700;
+
+    }
+
+    .card {
+
+      border: none;
+      border-radius: 15px;
+
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+      transform: translateY(0px);
+      transition: transform 0.3s ease;
+
+      .card-img-top {
+
+        width: 100%;
+        object-fit: contain;
+        position: relative;
+        overflow: hidden;
+
+        img {
+
+          width: 100%;
+          position: relative;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+        }
+      }
+
+      .card-body {
+
+        .short {
+
+          height: 100px;
+          overflow: hidden;
+
+        }
+      }
+
+
+    }
+
+    .card:hover {
+
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      transform: translateY(-10px);
+      transition: transform 0.3s ease;
+
+      .card-img-top {
+
+        img {
+          transform: translate(-23px -10px);
+          transform: scale(130%);
+          transition: transform 0.4s ease;
+
+        }
+      }
+    }
+
+
+
   }
 
-  .card-img-top {
+  #project {
+
+    padding-top: 100px;
+
+    .card {
 
 
+      .card-img-top {
 
-    img {
+        width: 100%;
+        object-fit: contain;
+        overflow: hidden;
 
-      width: 100%;
+        img {
+
+          width: 75%;
+          border-radius: 15px;
+        }
+      }
     }
   }
+}
+
+#contacts {
+
+  background-color: rgb(240, 240, 240);
+
+  padding-bottom: 3rem;
 
 }
 
