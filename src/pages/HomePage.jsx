@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useProducts } from "../contexts/ProductsContext"
 import ProjectsCard from "../components/ProjectsCard"
 import { supabase } from "../supabase"
-import profile from "../assets/foto-profilo.jpg"
+import profile from "../assets/foto-profilo.png"
 
 
 export default function HomePage() {
