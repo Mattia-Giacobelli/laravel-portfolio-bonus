@@ -53,26 +53,30 @@ export default function HomePage() {
         <>
             <section id="home" ref={(el) => setRefs(el, 'home')}>
 
-                <div className="container">
+                <div className="container bio">
 
-                    <div className="card">
-                        <div className="card-header">
-                            <h1>Junior Full Stack Web Developer</h1>
-                        </div>
-                        <div className="card-body d-flex">
-                            <p>
-                                Sono un Full Stack Web Developer appassionato di sviluppo software e tecnologie web moderne. Mi occupo della progettazione e realizzazione di applicazioni complete, curando sia il frontend che il backend, con particolare attenzione a prestazioni, scalabilità e qualità del codice.
-                                Nel corso della mia esperienza ho lavorato con diverse tecnologie e framework, sviluppando applicazioni web, API REST, sistemi gestionali e piattaforme digitali orientate all'esperienza utente e all'efficienza operativa.
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-md-10 col-lg-8">
+                            <div className="card border border-2 border-primary-subtle rounded-4 shadow-sm text-center">
+                                <div className="card-header">
+                                    <h1>Junior Full Stack Web Developer</h1>
+                                </div>
+                                <div className="card-body d-flex flex-column-reverse flex-xl-row align-items-center justify-content-between p-4 gap-4">
+                                    <p className="card-text text-start mb-0">
+                                        Sono un Full Stack Web Developer appassionato di sviluppo software e tecnologie web moderne. Mi occupo della progettazione e realizzazione di applicazioni complete, curando sia il frontend che il backend, con particolare attenzione a prestazioni, scalabilità e qualità del codice.
+                                        Nel corso della mia esperienza ho lavorato con diverse tecnologie e framework, sviluppando applicazioni web, API REST, sistemi gestionali e piattaforme digitali orientate all'esperienza utente e all'efficienza operativa.
 
-                                Tecnologie principali: PHP, Laravel, Java, Spring Boot, JavaScript, React, Node.js, Express.js e MySQL.
-                            </p>
-                            <img src={profile} alt="ProPic" className="profile-img" />
+                                        Tecnologie principali: PHP, Laravel, Java, Spring Boot, JavaScript, React, Node.js, Express.js e MySQL.
+                                    </p>
+                                    <img src={profile} alt="ProPic" className="profile-img img-fluid rounded-circle shadow-sm flex-shrink-0" />
+                                </div>
+                            </div>
                         </div>
                     </div>
 
 
                     <div className="go-to placeholder-wave">
-                        <button className="placeholder" onClick={() => { scroll() }}>
+                        <button className="" onClick={() => { scroll() }}>
                             <span className="">Vai ai Progetti</span>
                             <i className="bi bi-arrow-down"></i>
                         </button>
@@ -91,7 +95,7 @@ export default function HomePage() {
 
                     <h1 className="mb-5 text-center">I miei progetti</h1>
 
-                    <div className="row row-cols-sm-1 row-cols-md-2 row-cols-xl-3">
+                    <div className="row row-cols-1 row-cols-md-2 row-cols-xl-3">
                         {projects.map(project => {
 
                             return (

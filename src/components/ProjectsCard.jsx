@@ -22,7 +22,7 @@ export default function ProjectsCard({ project }) {
 
             <Link to={`/projects/${project.id}`}>
 
-                <div className="card d-flex flex-columns">
+                <div className="card d-flex flex-column">
                     <div className="card-img-top">
                         <img src={imgUrl} alt="copertina" />
                     </div>

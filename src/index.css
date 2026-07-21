@@ -106,7 +106,7 @@ main {
 
   #home {
 
-    height: 100vh;
+    height: 150vh;
     background-image: url('./assets/background.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,6 +116,7 @@ main {
     .container {
 
       height: 100vh;
+      padding-top: 20rem;
 
       display: flex;
       flex-direction: column;
@@ -124,7 +125,7 @@ main {
       font-size: 48px;
 
       h1 {
-        font-size: 64px;
+        font-size: 32px;
         font-weight: 900;
 
         /* TESTO CON GRADIENTE*/
@@ -142,8 +143,15 @@ main {
 
       }
 
+      p {
+
+        font-size: 16px;
+
+      }
+
       .card {
 
+        margin-top: 19rem;
         background-color: #0f172a;
         color: #f8fafc;
         font-size: 1.5rem;
@@ -162,6 +170,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: large;
 
         button {
 
@@ -187,13 +196,13 @@ main {
 
   #projects {
 
-    padding: 100px;
-    height: 100vh;
+    padding-top: 100px;
+
     background-color: rgb(240, 240, 240);
 
     h1 {
 
-      font-size: 3rem;
+      font-size: 1.5rem;
       font-weight: 700;
 
     }
@@ -287,6 +296,12 @@ main {
 
   padding-bottom: 3rem;
 
+  h3 {
+
+    font-size: 16px;
+
+  }
+
 }
 
 
@@ -305,5 +320,51 @@ footer {}
 
   100% {
     transform: translateY(0);
+  }
+}
+
+
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 768px) {
+
+  main {
+
+    #home {
+
+      .container {
+
+        h1 {
+
+          font-size: 40px;
+
+        }
+
+        p {
+
+          font-size: 24px;
+
+        }
+
+        .go-to {
+
+          font-size: 32px;
+
+        }
+
+      }
+
+    }
+
+    #projects {
+
+      h1 {
+
+        font-size: 3rem;
+
+      }
+    }
+
   }
 }
