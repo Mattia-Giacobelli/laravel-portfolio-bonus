@@ -14,7 +14,7 @@ export default function HomePage() {
     const { refProducts, refHome, visible, setRefs } = useProducts()
 
     const location = useLocation()
-    const target = location.state.scrollTo
+    const target = location.state?.scrollTo
 
     async function fetchProjects() {
 
@@ -46,18 +46,18 @@ export default function HomePage() {
         fetchProjects()
 
         if (target === 'projects') {
+            console.log('p');
 
-            const scroll = () => {
-                const section = document.querySelector('#projects');
-                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            };
+            const section = document.querySelector('#projects');
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
 
         } else if (target === 'contacts') {
 
-            const scrollContacts = () => {
-                const section = document.querySelector('#contacts');
-                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            };
+            console.log('c');
+
+            const section = document.querySelector('#contacts');
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
         }
 

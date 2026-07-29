@@ -43,11 +43,11 @@ export default function Header() {
                                     <Link className="nav-link" aria-current="page" to={'/'}>Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={'/'} state={{ scrollTo: 'projects' }}>Progetti</Link>
+                                    <Link className="nav-link" to={'/'} state={{ scrollTo: 'projects' }}>Progetti</Link>
                                     {/* <button onClick={() => { scrollProjects.current.scrollIntoView() }} >Projects</button> */}
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={'/'} state={{ scrollTo: 'contacts' }}>Contatti</Link>
+                                    <Link className="nav-link" to={'/'} state={{ scrollTo: 'contacts' }}>Contatti</Link>
                                 </li>
                             </ul> :
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -55,11 +55,11 @@ export default function Header() {
                                     <Link className="nav-link" aria-current="page" to={'/'}>Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <button onClick={() => { scroll() }} >Progetti</button>
+                                    <button className="nav-link" onClick={() => { scroll() }} >Progetti</button>
                                     {/* <button onClick={() => { scrollProjects.current.scrollIntoView() }} >Projects</button> */}
                                 </li>
                                 <li className="nav-item">
-                                    <button onClick={() => { scrollContacts() }} >Contatti</button>
+                                    <button className="nav-link" onClick={() => { scrollContacts() }} >Contatti</button>
                                 </li>
                             </ul>}
 
