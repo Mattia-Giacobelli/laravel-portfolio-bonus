@@ -4,6 +4,7 @@ import { useProducts } from "../contexts/ProductsContext"
 import ProjectsCard from "../components/ProjectsCard"
 import { supabase } from "../supabase"
 import profile from "../assets/foto-profilo.png"
+import { useLocation } from "react-router-dom"
 
 
 export default function HomePage() {
@@ -11,6 +12,9 @@ export default function HomePage() {
     const [projects, setProjects] = useState([])
 
     const { refProducts, refHome, visible, setRefs } = useProducts()
+
+    const location = useLocation()
+    const target = location.state.scrollTo
 
     async function fetchProjects() {
 
@@ -38,7 +42,25 @@ export default function HomePage() {
 
 
     useEffect(() => {
+
         fetchProjects()
+
+        if (target === 'projects') {
+
+            const scroll = () => {
+                const section = document.querySelector('#projects');
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+
+        } else if (target === 'contacts') {
+
+            const scrollContacts = () => {
+                const section = document.querySelector('#contacts');
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+
+        }
+
     }, [])
 
 
