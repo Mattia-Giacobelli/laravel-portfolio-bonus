@@ -28,7 +28,7 @@ export default function Header() {
             <nav className={`navbar navbar-expand-sm ${visible ? 'bg-nav-prod' : 'bg-transparent'}`}>
                 <div className="container-fluid pt-2 ps-4 pe-4 fs-4">
                     <div>
-                        <Link className="navbar-brand fs-4" to={'/'}>Mattia GIacobelli</Link>
+                        <Link className="navbar-brand fs-4" to={'/'}>Mattia Giacobelli</Link>
                     </div>
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
