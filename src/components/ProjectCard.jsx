@@ -56,7 +56,7 @@ export default function ProjectCard({ project }) {
                                 <div className="d-flex justify-content-between">
                                     <h2>
                                         {project.name}
-                                        <a className="btn btn-outline-info ms-3" href="https://siliconstock-front.giacobelli-mattia12.workers.dev/"> Visita</a>
+                                        <a className="btn btn-outline-info ms-3" href={project.link}> Visita</a>
                                     </h2>
                                     <h4>
                                         {project.type?.name}
