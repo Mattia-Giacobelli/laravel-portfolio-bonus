@@ -45,20 +45,15 @@ export default function HomePage() {
 
         fetchProjects()
 
-        if (target === 'projects') {
-            console.log('p');
+        if (target) {
+            const timer = setTimeout(() => {
+                const section = document.querySelector(`#${target}`);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
 
-            const section = document.querySelector('#projects');
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-
-        } else if (target === 'contacts') {
-
-            console.log('c');
-
-            const section = document.querySelector('#contacts');
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
+            return () => clearTimeout(timer);
         }
 
     }, [])
